@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav"
+    app:startDestination="@id/permissionFragment">
+
+    <fragment
+        android:id="@+id/restaurantMapFragment"
+        android:name="tn.org.myresto.ui.map.RestaurantMapFragment"
+        android:label="RestaurantMapFragment"
+        tools:layout="@layout/map_screen">
+        <action
+            android:id="@+id/restaurantDetail"
+            app:destination="@id/restaurantDetailDialog" />
+    </fragment>
+    <fragment
+        android:id="@+id/permissionFragment"
+        android:name="tn.org.myresto.ui.permission.PermissionFragment"
+        android:label="PermissionFragment"
+        tools:layout="@layout/permission_screen">
+        <action
+            android:id="@+id/action_permissionFragment_to_restaurantMapFragment"
+            app:destination="@id/restaurantMapFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/restaurantDetailDialog"
+        android:name="tn.org.myresto.ui.detail.RestaurantDetailDialog"
+        android:label="RestaurantDetailDialog"
+        tools:layout="@layout/restaurant_detail_screen">
+        <argument
+            android:name="restaurant"
+            app:argType="string"
+            app:nullable="true" />
+    </dialog>
+</navigation>

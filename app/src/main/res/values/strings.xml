@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">MyResto</string>
+    <string name="checking_gps_state">Checking GPS State</string>
+    <string name="enable_gps">Enable GPS</string>
+    <string name="permission_required">Permission Required</string>
+    <string name="grant">Grant</string>
+    <string name="permission_granted">Granted Permission</string>
+    <string name="grant_location_permission">grant location permission</string>
+</resources>
