@@ -11,6 +11,9 @@ fun List<RestaurantResponse.Response.Venue>.toRestaurantEntity(): List<Restauran
         val entity = RestaurantEntity(
             id = venue.id,
             name = venue.name,
+
+
+            
             location = LocationEntity(
                 address = venue.location.formattedAddress.joinToString(" "),
                 lat = venue.location.lat,
